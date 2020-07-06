@@ -6,11 +6,11 @@ pipeline {
                 git 'https://github.com/AmolMandloi/junit-java-example.git'
             }
         }
-        /*stage("Maven") {
+        stage("Maven") {
             steps {
                 bat "mvn clean package test"
             }
-        }*/
+        }
         stage("build & SonarQube analysis") {
             steps {
     withSonarQubeEnv('sonar') {

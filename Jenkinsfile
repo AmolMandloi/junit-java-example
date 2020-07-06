@@ -15,7 +15,7 @@ pipeline {
             steps {
     withSonarQubeEnv('sonar') {
                 
-                bat 'mvn sonar:sonar'
+                bat 'mvn -Dsonar.coverage.junit.xmlReportPaths=TEST-com.javacodegeeks.examples.junitmavenexample.CalculatorTest.xml sonar:sonar'
               }    } }
             
        stage("Quality Gate"){

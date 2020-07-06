@@ -30,11 +30,11 @@ pipeline {
     }
 }
 
-    */stage("Nexus Artifact Uploader") {
+    /*stage("Nexus Artifact Uploader") {
         steps {
             nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-web-thymeleaf8', classifier: '', file: 'C:\\Program Files (x86)\\Jenkins\\workspace\\nexus\\target\\spring-boot-web-thymeleaf-1.0.war', type: 'war']], credentialsId: 'nexus', groupId: 'org.springframework.boot', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'sample-release', version: '1.0'
         }
-    }   /*
+    }   */
       
         
         stage("Final") {

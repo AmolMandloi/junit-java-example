@@ -19,12 +19,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			  		<groupId>org.jacoco</groupId>
-  					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.8.6-SNAPSHOT</version>
-  					
-		</dependency>
+		
 	</dependencies>
 
 	<pluginRepositories>
@@ -61,28 +56,9 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-  					<groupId>org.jacoco</groupId>
-  					<artifactId>jacoco-maven-plugin</artifactId>
-  					
-			</plugin>
+			
 			
 		</plugins>
 	</build>
-	<reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <!-- select non-aggregate reports -->
-              <report>report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-    </plugins>
-  </reporting>
+	
 </project>

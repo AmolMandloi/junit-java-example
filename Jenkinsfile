@@ -14,7 +14,7 @@ pipeline {
         stage("build & SonarQube analysis") {
             steps {
     withSonarQubeEnv('sonar') {
-                jacoco execPattern: './target/jacoco.exec', runAlways: true
+                
                 bat 'mvn sonar:sonar'
               }    } }
             

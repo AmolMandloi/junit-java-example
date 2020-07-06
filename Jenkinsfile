@@ -15,7 +15,7 @@ pipeline {
             steps {
     withSonarQubeEnv('sonar') {
                 
-                bat 'mvn sonar:sonar -Dsonar.coverage.junit.xmlReportPaths=target/surefire-reports'
+                bat 'mvn sonar:sonar'
               }    } }
             
        stage("Quality Gate"){

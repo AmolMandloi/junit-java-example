@@ -15,7 +15,7 @@ pipeline {
             steps {
     withSonarQubeEnv('sonar') {
                 
-                bat 'mvn sonar:sonar -Dsonar.junit.reportsPath=target/surefire-reports/TEST-com.javacodegeeks.examples.junitmavenexample.CalculatorTest.xml'
+                bat 'mvn sonar:sonar -Dsonar.coverage.jacoco.xmlReportPaths=target/surefire-reports/TEST-com.javacodegeeks.examples.junitmavenexample.CalculatorTest.xml'
               }    } }
             
        stage("Quality Gate"){

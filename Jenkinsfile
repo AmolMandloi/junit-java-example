@@ -8,14 +8,14 @@ pipeline {
         }
         stage("Maven") {
             steps {
-                bat "mvn clean package test"
+                bat "mvn clean test"
             }
         }
         stage("build & SonarQube analysis") {
             steps {
     withSonarQubeEnv('sonar') {
                 
-                bat 'mvn -Dsonar.coverage.junit.xmlReportPaths=TEST-com.javacodegeeks.examples.junitmavenexample.CalculatorTest.xml sonar:sonar'
+                bat 'mvn clean verify sonar:sonar'
               }    } }
             
        stage("Quality Gate"){
